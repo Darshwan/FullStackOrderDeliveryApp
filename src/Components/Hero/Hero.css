@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Libre+Franklin&family=Montserrat&family=Poppins&display=swap');
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+.hero-container{
+  padding-left: 6rem;
+  z-index: 11;
+  /* padding-left: 50vw; */
+  align-items:start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* height: 98%; */
+  gap: 2.5rem;
+  text-align:start;
+  transition: 0.3s ease-in-out;
+}
+.hero-margin{
+  margin-top: 8rem;
+}
+.hero-container > h1{
+  color:#fafafa;
+  font-size: 3.1rem;
+  font-weight: 900;
+  line-height: 70px;
+}
+.hero-container > h1 > span{
+  font-size: 3.5rem;
+  font-weight: bolder;
+  background: rgb(227,35,40);
+  background: linear-gradient(15deg, rgba(227,35,40,0.9528186274509804) 31%, rgba(255,165,0,0.9920343137254902) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.Hero-buttons{
+  margin-top: 7px;
+  padding: 10px;
+  border: 1px solid #E32636;
+  gap: 1.1rem;
+  border-radius: 10px;
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+}
+.hero-btn{
+  cursor:pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #E32636;
+  border: 1px solid #E32636;
+  transition: .3s ease-in-out;
+  gap: 3px;
+}
+.whitebg{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+@media (max-width: 1000px) {
+  .hero-container{
+    padding: 0rem 0.5rem;
+    gap: 2rem;
+    /* min-height: 100vh; */
+  }
+  .hero-container > h1{
+    font-size: 3rem;
+  }
+  .hero-container > h1 > span{
+    font-size: 3rem;
+  }
+  .hero-btn{
+    padding: 0.5rem 1rem;
+  }
+
+}

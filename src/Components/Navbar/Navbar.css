@@ -1,0 +1,185 @@
+.navbar{
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly !important;
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    gap: 2rem;
+    background: rgba( 22, 19, 19, 0.75 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+  }
+  
+  .logo{
+    gap: 3px;
+    
+  }
+  .logo h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+  .nav_links{
+    list-style-type:none;
+    gap:1.1rem;
+    color: white;
+  }
+  .navlinks > li{
+    transition: 0.3s ease-in-out;
+    color: white;
+  }
+  .nav_links li:hover{
+    color: #E32636;
+  }
+  box-icon{
+    color: red;
+  }
+  .otherNavLinks{
+    gap: 1rem;
+  }
+  .searchBar input{
+    all: unset;
+  }
+  .searchBar {
+    text-align: start;
+    padding: 7px 10px;
+    border: 1px solid #E32636; 
+    border-radius: 10px;
+  }
+  .searchBar2 input{
+    all: unset;
+  }
+  .searchBar2{
+    display: none;
+    text-align: start;
+    padding: 7px 10px;
+    border: 1px solid #E32636; 
+    border-radius: 10px;
+  }
+  .Notification{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+    display: inline-block;
+  }
+  .circle{
+    position: absolute;
+    padding: 3px;
+    top: -1px;
+    border-radius: 50%;
+    right: -1px;
+    background-color: #E32636;
+    font-size: 10px;
+    color:#fff;
+  }
+  .Cart{
+    position: relative;
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .cartCircle{
+    position: absolute;
+    padding: 3px;
+    top: -1px;
+    border-radius: 50%;
+    right: -1px;
+    background-color: #E32636;
+    font-size: 10px;
+    color:#fff;
+  }
+  .loginBtn{
+    font-size: 0.9rem;
+
+  }
+  .signUpBtn{
+    font-size: 0.9rem;
+    color: #E32636;
+    border: 1px solid #E32636;
+    background-color: transparent;
+  }
+  .signUpBtn:hover{
+      color: white;
+      background-color: transparent;
+    border: 1px solid white;
+  }
+.Dots{
+  display: none;
+  pointer-events: none;
+}
+.threeDot{
+  display: none;
+}
+  .loginAndSignIcon{
+    display: none;
+  }
+  .sideBar2{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    top:0;
+    height: 100vh;
+    right: -100%;
+    padding: 1rem;
+    z-index: 15;
+    transition: left 0.5s ease-in-out;
+    background: rgba(22, 20, 20, 0.068);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 5px );
+    transition: 0.6s ease-in-out;
+}
+#toggleSlide:checked ~ .sideBar2{
+  right: 0;
+}
+  @media (max-width: 1100px) {
+    .loginAndSignIcon{
+      display: block;
+    }
+    .loginBtn, .signUpBtn{
+      display: none;
+    }
+  }
+  @media (max-width: 1002px) {
+  .otherNavLinks{
+    display: none;
+  }
+  .threeDot{
+    display: block;
+  }
+  }
+@media (max-width: 865px) {
+  .nav_link{
+    display: none;
+  }
+  .navbar{
+    background: transparent;
+  }
+  .navbarAndSideBar{
+    padding: 0;
+  }
+  .searchBar{
+    justify-content: space-between;
+    width: 40vw;
+  }
+  
+}
+@media (max-width: 780px) {
+  .sideBar2{
+    width: 37vw;
+  }
+}
+@media (max-width: 500px) {
+  .nav_link_2{
+    display: flex !important;
+  }
+  .sideBar2{
+    width: 80vw;
+  }
+  .searchBar{
+    display: none;
+  }
+}
