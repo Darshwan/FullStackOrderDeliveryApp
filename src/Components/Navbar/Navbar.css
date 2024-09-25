@@ -11,6 +11,19 @@
     backdrop-filter: blur( 5.5px );
     -webkit-backdrop-filter: blur( 5.5px );
   }
+  .miniNavbar{
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly !important;
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    gap: 2rem;
+    background: rgba(255, 244, 244, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 161, 0.212);
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+  }
   
   .logo{
     gap: 3px;
@@ -106,6 +119,18 @@
       background-color: transparent;
     border: 1px solid white;
   }
+  .miniSignUpBtn{
+    font-size: 0.9rem;
+    color: #E32636;
+    border: 1px solid #E32636;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+  .miniSignUpBtn:hover{
+    color: white;
+    background-color: #E32636;
+    border: 1px solid #E32636;
+}
 .Dots{
   display: none;
   pointer-events: none;

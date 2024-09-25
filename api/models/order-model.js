@@ -1,20 +1,39 @@
 import mongoose from 'mongoose'
-import User from './user-model.js';
-
+import pizzas from '../scripts/pizzas.json' assert{type: 'json'}
 
 const orderSchema = new mongoose.Schema({
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: User },
-    items: [ // Each item is a pizza customization
-      {
-        base: String,
-        sauce: String,
-        cheese: String,
-        veggies: String
-      }
-    ],
-    totalPrice: Number,
-    status: { type: String, enum: ['Order Received', 'In Kitchen', 'Sent to Delivery'], default: 'Order Received' }
-  });
-  
-  const OrderSchema = mongoose.model('OrderSchema', orderSchema)
-export default OrderSchema
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  items: [
+    {
+      pizzaId: { type: mongoose.Schema.Types.ObjectId, ref: 'pizzas', required: true },
+      quantity: { type: Number, required: true },
+    }
+  ],
+  phoneNumber:{
+    type: Number,
+    required: true,
+  },
+  HostAddress: {
+    type: String,
+    required: true,
+  },
+  totalPrice: {
+    type: Number,
+    required: true
+  },
+  status: {
+    type: String,
+    default: 'Pending'
+  },  // Other statuses could be 'In Progress', 'Completed', 'Delivered'
+  paymentStatus: {
+    type: String,
+    default: 'Unpaid'
+  },  // 'Paid' or 'Failed'
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const order = mongoose.model('order', orderSchema)
+export default order

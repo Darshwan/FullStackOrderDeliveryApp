@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import User from "../models/user-model.js";
 import bcryptjs from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 export const signup = async (req, res) => {
-    console.log(req.body);
+    console.log(req.body)
 
     const { username, email, password } = req.body;
     if (!username || !email || !password || username === '' || email === '' || password === '') {
@@ -41,12 +43,20 @@ export const login = async (req, res) => {
             return res.status(401).json({ success: false, message: "Invalid password" });
         }
 
+        const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET, {
+            expiresIn: '1h', // Token expires in 1 hour
+        });
         const { password: pass, ...rest } = validUser._doc;
-        
+        res.cookie('access_token', token, {
+            httpOnly: true,
+            secure: false,
+        });
+        console.log("Token is: ", token);
         res.status(200).json({
             success: true,
             message: 'Login successful',
-            user: rest  // Send user data without the password
+            token: token,
+            user: rest  
         });
         console.log(rest)
     } catch (error) {

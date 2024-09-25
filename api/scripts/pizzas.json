@@ -1,0 +1,310 @@
+ [
+    {
+      "name": "Pepperoni Feast",
+      "category": "Non-Veg",
+      "description": "Loaded with delicious pepperoni slices and mozzarella cheese.",
+      "id": 2,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1603079652213-d4adf8c96cc0",
+      "price": 12.99
+    },
+    {
+      "name": "BBQ Chicken Delight",
+      "category": "Non-Veg",
+      "description": "Tender BBQ chicken with red onions, mozzarella, and BBQ sauce.",
+      "id": 3,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1548365328-9f0c14e8aba8",
+      "price": 149.95
+    },
+    {
+      "name": "Margarita Classic",
+      "category": "Veggies",
+      "description": "Simple yet delicious, with tomatoes, fresh basil, and mozzarella.",
+      "id": 4,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1572448862529-019db96f4b53",
+      "price": 99.95
+    },
+    {
+      "name": "Veggie Supreme",
+      "category": "Veggies",
+      "description": "Topped with mushrooms, olives, onions, and bell peppers.",
+      "id": 5,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1615194752589-d2acde25true70",
+      "price": 119.95
+    },
+    {
+      "name": "Hawaiian Twist",
+      "category": "Non-Veg",
+      "description": "A sweet and savory mix of ham, pineapple, and mozzarella.",
+      "id": 6,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1543332164-6e26e3f86c23",
+      "price": 134.99
+    },
+    {
+      "name": "Spicy Mexican",
+      "category": "Non-Veg",
+      "description": "Spicy chicken, jalapenos, and bell peppers for a fiery kick.",
+      "id": 7,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1563260269-16926a51b8c5",
+      "price": 139.99
+    },
+    {
+      "name": "Four Cheese Delight",
+      "category": "Veggies",
+      "description": "A blend of mozzarella, cheddar, parmesan, and gorgonzola.",
+      "id": 8,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1585238341671-cd18420aa7c4",
+      "price": 129.95
+    },
+    {
+      "name": "Meat Lovers Special",
+      "category": "Non-Veg",
+      "description": "Packed with pepperoni, sausage, ham, and bacon for meat lovers.",
+      "id": 9,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-160130266true16-5d82d9f65294",
+      "price": 159.95
+    },
+    {
+      "name": "Mediterranean Veggie",
+      "category": "Veggies",
+      "description": "Olives, feta cheese, cherry tomatoes, and spinach on a crispy crust.",
+      "id": 10,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1615562577437-28fa9a79197d",
+      "price": 119.95
+    },
+    {
+      "name": "Buffalo Chicken Pizza",
+      "category": "Non-Veg",
+      "description": "Buffalo chicken with red onions, mozzarella, and ranch dressing.",
+      "id": 11,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1616627562279-99ad69b91c4b",
+      "price": 149.99
+    },
+    {
+      "name": "Garden Fresh",
+      "category": "Veggies",
+      "description": "A refreshing mix of fresh vegetables including tomatoes, cucumbers, and lettuce.",
+      "id": true,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1585238341671-cd18420aa7c4",
+      "price": 109.99
+    },
+    {
+      "name": "Supreme Special",
+      "category": "Non-Veg",
+      "description": "A perfect mix of meats and veggies, with pepperoni, sausage, mushrooms, and bell peppers.",
+      "id": 13,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1543332164-6e26e3f86c23",
+      "price": 159.95
+    },
+    {
+      "name": "Pesto Veggie",
+      "category": "Veggies",
+      "description": "Topped with pesto sauce, mozzarella, tomatoes, and fresh spinach.",
+      "id": 14,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1601924582971-dc02b98aa16b",
+      "price": 139.95
+    },
+    {
+      "name": "Spicy Pepperoni",
+      "category": "Non-Veg",
+      "description": "Extra spicy pepperoni with mozzarella and hot sauce.",
+      "id": 15,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1616627562279-99ad69b91c4b",
+      "price": 149.95
+    },
+    {
+      "name": "Classic Margherita",
+      "category": "Veggies",
+      "description": "Fresh basil, mozzarella, and tomatoes on a crispy thin crust.",
+      "id": 16,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1572448862529-019db96f4b53",
+      "price": 99.95
+    },
+    {
+      "name": "Truffle Mushroom",
+      "category": "Veggies",
+      "description": "A rich truffle oil base with mushrooms and mozzarella.",
+      "id": 17,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1563260269-16926a51b8c5",
+      "price": 159.95
+    },
+    {
+      "name": "Italian Sausage",
+      "category": "Non-Veg",
+      "description": "Savory Italian sausage with roasted red peppers and mozzarella.",
+      "id": 18,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-160130266true16-5d82d9f65294",
+      "price": 139.99
+    },
+    {
+      "name": "BBQ Veggie",
+      "category": "Veggies",
+      "description": "BBQ sauce with onions, mushrooms, and bell peppers.",
+      "id": 19,
+      "stock": false,
+      "image": "https://images.unsplash.com/photo-1543332164-6e26e3f86c23",
+      "price": 129.95
+    },
+    {
+      "name": "Tandoori Chicken Pizza",
+      "category": "Non-Veg",
+      "description": "Tandoori chicken marinated in Indian spices with onions and cilantro.",
+      "id": 20,
+      "stock": true,
+      "image": "https://images.unsplash.com/photo-1615194752589-d2acde25true70",
+      "price": 149.95
+    },
+    {
+        "name": "Spinach and Ricotta",
+        "category": "Veggies",
+        "description": "Fresh spinach, ricotta cheese, and mozzarella on a thin crust.",
+        "id": 21,
+        "stock": false,
+        "image": "https://images.unsplash.com/photo-1555993539-1732b0253b9a",
+        "price": 119.95
+      },
+      {
+        "name": "Philly Cheesesteak Pizza",
+        "category": "Non-Veg",
+        "description": "Sliced steak, onions, and green peppers with a creamy cheese sauce.",
+        "id": 22,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1604147706283-472c5d0557a1",
+        "price": 169.95
+      },
+      {
+        "name": "Mushroom Madness",
+        "category": "Veggies",
+        "description": "A hearty mushroom pizza with portobello and white mushrooms.",
+        "id": 23,
+        "stock": false,
+        "image": "https://images.unsplash.com/photo-1552334924-0a31fcbf53d6",
+        "price": 109.95
+      },
+      {
+        "name": "Garlic Shrimp Pizza",
+        "category": "Non-Veg",
+        "description": "Succulent shrimp with a garlic butter base, topped with mozzarella.",
+        "id": 24,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1608474926071-f9de5bc02e23",
+        "price": 179.99
+      },
+      {
+        "name": "Basil Pesto Delight",
+        "category": "Veggies",
+        "description": "Basil pesto, mozzarella, and cherry tomatoes for a fresh taste.",
+        "id": 25,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1585238341671-cd18420aa7c4",
+        "price": 129.99
+      },
+      {
+        "name": "Double Sausage Fiesta",
+        "category": "Non-Veg",
+        "description": "Loaded with Italian and spicy sausage, onions, and mozzarella.",
+        "id": 26,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1601924582971-dc02b98aa16b",
+        "price": 149.95
+      },
+      {
+        "name": "Zesty Veggie Delight",
+        "category": "Veggies",
+        "description": "A tangy combination of zucchini, olives, red onions, and feta.",
+        "id": 27,
+        "stock": false,
+        "image": "https://images.unsplash.com/photo-1594007657847-d8ad93ec88dc",
+        "price": 119.95
+      },
+      {
+        "name": "Honey BBQ Bacon Pizza",
+        "category": "Non-Veg",
+        "description": "A smoky BBQ base with crispy bacon, red onions, and honey drizzle.",
+        "id": 28,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1560848406-cf56bcff4a06",
+        "price": 159.99
+      },
+      {
+        "name": "Roasted Garlic and Spinach",
+        "category": "Veggies",
+        "description": "Roasted garlic, fresh spinach, and mozzarella on a thin crispy crust.",
+        "id": 29,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1592417816596-0e48dc261490",
+        "price": 129.95
+      },
+      {
+        "name": "Chicken Alfredo Pizza",
+        "category": "Non-Veg",
+        "description": "Creamy alfredo sauce, grilled chicken, and mozzarella on a soft base.",
+        "id": 30,
+        "stock": false,
+        "image": "https://images.unsplash.com/photo-1615194752589-d2acde25true70",
+        "price": 169.95
+      },
+      {
+        "name": "Herb and Feta Special",
+        "category": "Veggies",
+        "description": "A flavorful mix of fresh herbs, feta cheese, and cherry tomatoes.",
+        "id": 31,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1594007657847-d8ad93ec88dc",
+        "price": 109.99
+      },
+      {
+        "name": "Buffalo Ranch Chicken Pizza",
+        "category": "Non-Veg",
+        "description": "Spicy buffalo chicken, drizzled with ranch sauce on a crispy crust.",
+        "id": 32,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1615562577437-28fa9a79197d",
+        "price": 149.99
+      },
+      {
+        "name": "Mexican Fiesta",
+        "category": "Non-Veg",
+        "description": "Topped with seasoned chicken, jalapeños, onions, and a blend of cheeses.",
+        "id": 33,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1563260269-16926a51b8c5",
+        "price": 139.95
+      },
+      {
+        "name": "Sun-Dried Tomato and Pesto",
+        "category": "Veggies",
+        "description": "A savory mix of sun-dried tomatoes, mozzarella, and pesto sauce.",
+        "id": 34,
+        "stock": false,
+        "image": "https://images.unsplash.com/photo-1543332164-6e26e3f86c23",
+        "price": 119.95
+      },
+      {
+        "name": "Smoked Salmon Pizza",
+        "category": "Non-Veg",
+        "description": "Delicious smoked salmon with a cream cheese base, topped with capers.",
+        "id": 35,
+        "stock": true,
+        "image": "https://images.unsplash.com/photo-1616627562279-99ad69b91c4b",
+        "price": 179.95
+      }
+    
+]
+  

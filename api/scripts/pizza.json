@@ -1,0 +1,11 @@
+[
+  {
+  "name": "Pepperoni Feast",
+  "category": "Non-Veg",
+  "description": "Loaded with delicious pepperoni slices and mozzarella cheese.",
+  "id": 2,
+  "stock": true,
+  "image": "https://images.unsplash.com/photo-1603079652213-d4adf8c96cc0",
+  "price": 129.99
+}
+]

@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import "./Navbar2.css";
 import { useDispatch, useSelector } from "react-redux";
-
 import { signoutSuccess } from "../../redux/user/userSlice";
 
 export default function Navbar() {
@@ -65,12 +64,12 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/Pages"
+                to="/products"
                 className={({ isActive }) => {
                   `${isActive ? "text-rose-800" : "text-stone-100"}`;
                 }}
               >
-                Pages
+                Pizzas
               </NavLink>
             </li>
             <li>
@@ -89,6 +88,12 @@ export default function Navbar() {
           <input type="text" placeholder="Search Food..." />
           <box-icon name="search" color="#E32636"></box-icon>
         </div>
+        <div className=" sm:flex gap-4 flex-row items-center justify-center lg:hidden md:hidden">
+                <Link to='/cart' className="flex items-center justify-center p-2 border border-red-600 rounded-full">
+                    <box-icon name='cart' type='solid' color="#E32636"></box-icon>
+                </Link>
+                <Link to='/wishlist' className="flex items-center justify-center p-2 border border-red-600 rounded-full"><box-icon type='solid' name='heart' color="#E32636"></box-icon></Link>
+                </div>
         <div className="otherNavLinks flexCenRow">
           {currentUserOfRestaurantApp ? (
             <div className=" dropdown">
@@ -161,7 +166,8 @@ export default function Navbar() {
             </div>
           ) : (
             <>
-              <button className="loginBtn btn">Login</button>
+              <button className="loginBtn btn">
+                <Link to="/login">Login</Link></button>
               <button className="signUpBtn btn">
                 <Link to="/signup">Sign up</Link>
               </button>

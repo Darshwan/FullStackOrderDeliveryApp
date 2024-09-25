@@ -14,6 +14,7 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import Cart from "./Components/cart/cart";
 import PrivateRoute from "./Components/PrivateRoute";
+import PlaceOrder from "./Components/PlaceOrder";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
     element: <Cart />,
     errorElement: <Error />,
   },
+  {
+    path: "/placeorder",
+    element: <PlaceOrder />,
+    errorElement: <Error />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

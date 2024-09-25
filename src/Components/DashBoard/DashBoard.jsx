@@ -82,8 +82,8 @@ const handleSignout = () => {
               <span className="font-semibold opacity-90">WishList</span>
             </div>
             <div className="asideLink flex flex-row justify-center items-center gap-2">
-              <box-icon type="solid" name="star" color="#E32636"></box-icon>
-              <span className="font-semibold opacity-90">Reviews</span>
+              <box-icon type="solid" name="cart" color="#E32636"></box-icon>
+              <span className="font-semibold opacity-90"><Link to='/cart'>Cart</Link></span>
             </div>
             {/* <div className="asideLink flex flex-row justify-center items-center gap-2">
             <box-icon name="lock-alt" type="solid" color="#E32636"></box-icon>
