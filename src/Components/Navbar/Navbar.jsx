@@ -87,7 +87,7 @@ export default function Navbar() {
         <div className="searchBar flexCenRow">
           <input type="text" placeholder="Search Food..." />
           <box-icon name="search" color="#E32636"></box-icon>
-        </div>
+        </div>  
         <div className=" sm:flex gap-4 flex-row items-center justify-center lg:hidden md:hidden">
                 <Link to='/cart' className="flex items-center justify-center p-2 border border-red-600 rounded-full">
                     <box-icon name='cart' type='solid' color="#E32636"></box-icon>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 className="container bg-stone-800 h-[42px] w-[42px] overflow-hidden rounded-full cursor-pointer "
               >
                 <img
-                  src={currentUserOfRestaurantApp.profileImgUrl}
+                  src={currentUserOfRestaurantApp.profilePic}
                   className="h-full w-full"
                   alt="photo"
                 />

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Poppins&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Poppins&display=swap");
 
 /* 
 font-family: 'DM Sans', sans-serif;
@@ -7,68 +6,74 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Inter', sans-serif; 
 */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
-*::selection{
+*::selection {
   color: violet;
 }
-.paddings{
+.paddings {
   padding: 1rem;
 }
-.cup{
-  cursor:pointer;
+.cup {
+  cursor: pointer;
 }
-.btn{
-  all:unset;
-  cursor:pointer;
+.btn {
+  all: unset;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   color: white;
-  background-color: #E32636;
-  border: 1px solid #E32636;
-  transition: .3s ease-in-out;
+  background-color: #e32636;
+  border: 1px solid #e32636;
+  transition: 0.3s ease-in-out;
 }
-.btn:hover{
-  color: #E32636;
+.btn:hover {
+  color: #e32636;
   background-color: transparent;
-  border: 1px solid #E32636;
+  border: 1px solid #e32636;
 }
-.btn-alt{
-  all:unset;
-  cursor:pointer;
+.btn-alt {
+  all: unset;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: #E32636;
+  color: #e32636;
   background-color: transparent;
-  border: 1px solid #E32636;
-  transition: .3s ease-in-out;
+  border: 1px solid #e32636;
+  transition: 0.3s ease-in-out;
 }
-.btn-alt:hover{
+.btn-alt:hover {
   color: #fafaf5;
-  background-color: #E32636;
-  border: 1px solid #E32636;
+  background-color: #e32636;
+  border: 1px solid #e32636;
 }
-.flexCenRow{
+.glass-effect {
+  background: rgba(255, 244, 244, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 161, 0.212);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+}
+.flexCenRow {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  text-align:center;
+  text-align: center;
 }
-.flexCenCol{
+.flexCenCol {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.navbarAndSideBar{
+.navbarAndSideBar {
   width: 100%;
   justify-content: center !important;
   position: sticky;
@@ -76,74 +81,72 @@ font-family: 'Inter', sans-serif;
   gap: 2rem;
   z-index: 9;
   /* padding: 1rem; */
-
 }
-.navAndHero-container{
-  position:relative;
-  text-align:center;
-  align-items:center;
+.navAndHero-container {
+  position: relative;
+  text-align: center;
+  align-items: center;
   color: white;
 }
-.navAndHero-container > img{
+.navAndHero-container > img {
   height: 110vh !important;
   object-fit: cover;
-  width:100%;
+  width: 100%;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   overflow: hidden;
 }
-.Black_bg{
-  position:absolute;
+.Black_bg {
+  position: absolute;
   z-index: 9;
   height: 100%;
   width: 100%;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-  top:0;
+  top: 0;
 }
-.sectionTitle{
-  color:#fafafa;
+.sectionTitle {
+  color: #fafafa;
   font-size: 2.3rem;
   font-weight: 600;
   /* line-height: 70px; */
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.sectionSubTitle{
-  color:#E32636;
+.sectionSubTitle {
+  color: #e32636;
   font-size: 1.3rem;
   font-weight: 900;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.sectionDesc{
+.sectionDesc {
   color: #fafafa;
   font-size: small;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.sectionTitle:hover{
+.sectionTitle:hover {
   scale: 1.01;
 }
-.sectionSubTitle:hover{
+.sectionSubTitle:hover {
   scale: 1.1;
 }
-.btnForSm{
+.btnForSm {
   /* display: none; */
-  all:unset;
-  cursor:pointer;
+  all: unset;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: #E32636;
+  color: #e32636;
   background-color: transparent;
-  border: 1px solid #E32636;
-  transition: .3s ease-in-out;
+  border: 1px solid #e32636;
+  transition: 0.3s ease-in-out;
 }
-.btnForSm:hover{
+.btnForSm:hover {
   color: #fafaf5;
-  background-color: #E32636;
-  border: 1px solid #E32636;
+  background-color: #e32636;
+  border: 1px solid #e32636;
 }
 @media (max-width: 600px) {
-  .sectionTitle{
+  .sectionTitle {
     font-size: 2rem;
   }
-
 }

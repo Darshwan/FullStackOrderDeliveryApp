@@ -43,6 +43,7 @@ const updateUser = async (req, res, next) => {
     if (req.body.password) updateData.password = req.body.password;
     if (req.body.phone) updateData.phone = req.body.phone;
     if (req.body.bio) updateData.bio = req.body.bio;
+    if (req.body.profilePic) updateData.profilePic = req.body.profilePic;
 
     const updatedUser = await User.findByIdAndUpdate(
       req.params.userId,

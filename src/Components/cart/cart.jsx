@@ -45,7 +45,7 @@ function Cart() {
                   <div className="p-6 grid gap-4">
                     <div className="grid grid-cols-[150px_1fr_100px] items-start gap-4">
                       <img
-                        src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_960_720.jpg"
+                        src={item.image}
                         alt="Product Image"
                         width="full"
                         height="full"
@@ -121,9 +121,9 @@ function Cart() {
           </div>
 
           <div className="w-full p-6 Buttons flex flex-row justify-end items-end gap-4">
-            <button className="btn flex items-center justify-center w-2/6">
-              Buy Now: ${total.toFixed(4)}
-            </button>
+            <Link to='/placeorder' className="btn flex items-center justify-center w-2/6">
+              Order Now: ${total.toFixed(4)}
+            </Link>
           </div>
         </div>
       ) : (

@@ -1,7 +1,7 @@
 import orders from "../models/order-model.js";
 
 const createOrder = async (req, res) => {
-    const { items, totalPrice, HostAddress,phoneNumber } = req.body;
+    const { items, totalPrice, HostAddress,phoneNumber,paymentStatus } = req.body;
 
   try {
     const order = new orders({
@@ -11,6 +11,7 @@ const createOrder = async (req, res) => {
       HostAddress,
       phoneNumber,
       status: 'Pending',
+      paymentStatus,
     });
     const savedOrder = await order.save();
     

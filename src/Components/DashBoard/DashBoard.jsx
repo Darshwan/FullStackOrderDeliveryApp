@@ -16,6 +16,7 @@ function DashBoard() {
   const [dialogBoxOpen, setdialogBoxOpen] = useState(false);
   const userId = useSelector(state => state.userOfRestaurantApp.currentUserOfRestaurantApp?._id?? 'Not signed in');
   const username = useSelector(state => state.userOfRestaurantApp.currentUserOfRestaurantApp?.username)
+  const {currentUserOfRestaurantApp} = useSelector(state => state.userOfRestaurantApp)
   const location = useLocation();
   const [tab, setTab] = useState("");
   useEffect(() => {
@@ -38,12 +39,12 @@ const handleSignout = () => {
       {/* <Navbar/> */}
       <GoBackButton className="z-10 top-22 mt-2 bg-transparent" />
 
-      <div className="dashboard-container sm:px-1 min-h-screen py-6 px-4 text-stone-900 flex flex-row items-start justify-start gap-4">
-        <aside className="bg-stone-200 w-[305px] p-3 rounded-lg flex flex-col justify-center items-center gap-6 ">
+      <div className="dashboard-container sm:px-0 py-2 min-h-screen px-4 text-stone-900 flex flex-row items-start justify-start gap-4">
+        <aside className="bg-stone-200 w-[305px] min-h-screen p-3 rounded-lg flex flex-col justify-center items-center gap-6 ">
           <div className="profileDetails flex flex-col justify-center items-center gap-1">
             <div className="profileImg w-full flex flex-col justify-center items-center">
               <img
-                src="https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg?w=740"
+                src={currentUserOfRestaurantApp.profilePic}
                 alt="Photo"
                 className="w-6/12 mix-blend-multiply border border-solid border-rose-500 rounded-full"
               />

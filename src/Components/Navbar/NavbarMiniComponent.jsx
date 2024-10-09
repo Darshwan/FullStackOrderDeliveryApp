@@ -95,7 +95,7 @@ export default function NavbarMiniComponent() {
                                 className="container bg-stone-800 h-[42px] w-[42px] overflow-hidden rounded-full cursor-pointer "
                             >
                                 <img
-                                    src={currentUserOfRestaurantApp.profileImgUrl}
+                                    src={currentUserOfRestaurantApp.profilePic}
                                     className="h-full w-full"
                                     alt="photo"
                                 />

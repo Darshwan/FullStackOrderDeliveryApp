@@ -44,7 +44,7 @@ export const login = async (req, res) => {
         }
 
         const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET, {
-            expiresIn: '1h', // Token expires in 1 hour
+            expiresIn: '24h', // Token expires in 24 hour
         });
         const { password: pass, ...rest } = validUser._doc;
         res.cookie('access_token', token, {
