@@ -11,10 +11,11 @@ import Login from "./Components/Login/Login";
 import { persistor, store } from "./redux/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-
 import Cart from "./Components/cart/cart";
 import PrivateRoute from "./Components/PrivateRoute";
 import PlaceOrder from "./Components/PlaceOrder";
+import NavbarMiniComponent from "./Components/Navbar/NavbarMiniComponent";
+import Wishlists from "./Components/Wishlist/Wishlists";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,12 @@ const router = createBrowserRouter([
     path: "/placeorder",
     element: <PlaceOrder />,
     errorElement: <Error />,
-  }
+  },
+  {
+    path: "/wishlist",
+    element: <Wishlists />,
+    errorElement: <Error />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

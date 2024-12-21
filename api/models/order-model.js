@@ -2,13 +2,11 @@ import mongoose from 'mongoose'
 import pizzas from '../scripts/pizzas.json' assert{type: 'json'}
 
 const orderSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  items: [
-    {
-      pizzaId: { type: mongoose.Schema.Types.ObjectId, ref: 'pizzas', required: true },
-      quantity: { type: Number, required: true },
-    }
-  ],
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  items: {
+    type: Array,
+    required: true,
+  },
   phoneNumber:{
     type: Number,
     required: true,
@@ -19,6 +17,10 @@ const orderSchema = new mongoose.Schema({
   },
   totalPrice: {
     type: Number,
+    required: true
+  },
+  email:{
+    type: String,
     required: true
   },
   status: {

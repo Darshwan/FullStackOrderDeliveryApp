@@ -1,35 +1,37 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   favoriteItems: [],
 };
 
 const favoriteItemsSlice = createSlice({
-  name: 'wishlistOfResturantApp',
+  name: "wishlistOfRestaurantApp",
   initialState,
   reducers: {
     addToWishlist: (state, action) => {
       const item = action.payload;
       const existingItem = state.favoriteItems.find((i) => i.id === item.id);
 
-      if (existingItem) {
-        existingItem.quantity += item.quantity;
-      } else {
+      if (!existingItem) {
         state.favoriteItems.push(item);
+        localStorage.setItem(
+          "wishlistOfRestaurantApp",
+          JSON.stringify(state.favoriteItems)
+        );
       }
-      localStorage.setItem('wishlistOfResturantApp', JSON.stringify(state.favoriteItems));
     },
     removeFromWishlist: (state, action) => {
       state.favoriteItems = state.favoriteItems.filter(
         (item) => item.id !== action.payload
       );
-      // Save updated state to localStorage
-      localStorage.setItem('wishlistOfResturantApp', JSON.stringify(state.favoriteItems));
+      localStorage.setItem(
+        "wishlistOfRestaurantApp",
+        JSON.stringify(state.favoriteItems)
+      );
     },
     clearWishlist: (state) => {
       state.favoriteItems = [];
-      // Clear cart from localStorage
-      localStorage.removeItem('wishlistOfResturantApp');
+      localStorage.removeItem("wishlistOfRestaurantApp");
     },
   },
 });

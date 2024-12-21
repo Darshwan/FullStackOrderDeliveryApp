@@ -2,26 +2,36 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../redux/cart/cartSlice";
-import { addToWishlist } from "../../redux/wishlist/wishlist";
+import { addToWishlist, removeFromWishlist } from "../../redux/wishlist/wishlist";
 import NavbarMiniComponent from "../Navbar/NavbarMiniComponent";
-
+import { useNavigate } from "react-router-dom";
 
 function Pizzas() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [pizzas, setPizzas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [cartClicked, setCartClicked] = useState("")
+  const [cartClicked, setCartClicked] = useState("");
   const [heartClicked, setheartClicked] = useState(false);
+  const [wishlistMessage, setWishlistMessage] = useState("");
 
+const wishlistItems = useSelector(
+  (state) => state.wishlistsOfResturantApp.favoriteItems
+); 
+const isInWishlist = (pizzaId) => {
+  return wishlistItems.some((item) => item.id === pizzaId);
+};
   // Fetching the pizzas from the database
   useEffect(() => {
     const fetchPizzas = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/products/pizzas");
+        const response = await fetch(
+          "http://localhost:3000/api/products/pizzas"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -38,6 +48,7 @@ function Pizzas() {
   }, []);
 
   if (error) return <p>Error: {error}</p>;
+console.log(wishlistItems);
 
   // Function to handle adding items to the cart
   const handleAddToCart = (pizza) => {
@@ -59,25 +70,32 @@ function Pizzas() {
       setCartClicked("");
     }, 5000);
   };
-  const handleAddTowishlist = (pizza) => {
-    const itemToAddWishlist = {
-      id: pizza.id,
-      name: pizza.name,
-      price: pizza.price,
-      description: pizza.description
-    };
-    dispatch(addToWishlist(itemToAddWishlist));
-    setheartClicked(true);
-    console.log(heartClicked);
-
-    setTimeout(() => {
-      setCartClicked("");
-    }, 5000);
+  const handleWishlistToggle = (pizza) => {
+    if (isInWishlist(pizza.id)) {
+      dispatch(removeFromWishlist(pizza.id));
+      setheartClicked(false);
+      setWishlistMessage(`${pizza.name} has been removed from wishlist.`);
+      setTimeout(() => {
+        setWishlistMessage("");
+        setheartClicked(false);
+      }, 3000)
+    } else {
+      dispatch(addToWishlist(pizza));
+      setheartClicked(true);
+      setWishlistMessage(`${pizza.name} has been added to your wishlist.`);
+      setTimeout(() => {
+        setWishlistMessage("");
+        setheartClicked(false);
+      }, 3000);
+    }
+  };
+  const handleOrderNow = (pizza) => {
+    navigate("/placeorder", { state: { pizza } });
   };
   return (
     <>
       {loading ? (
-        <Skeleton count={30} baseColor="#999" highlightColor="#101020" />
+        <Skeleton count={35} baseColor="#FF7417" highlightColor="#DBA520" />
       ) : (
         <>
           <NavbarMiniComponent />
@@ -92,6 +110,20 @@ function Pizzas() {
                 <Link to="/cart" className="underline">
                   CheckOut
                 </Link>
+              </p>
+            </div>
+          )}
+          {heartClicked && (
+            <div
+              className={
+                heartClicked
+                  ? "block fixed top-20 right-0 p-4 bg-pink-100 text-pink-800 rounded-lg shadow-lg"
+                  : "hidden"
+              }
+              style={{ zIndex: 9999 }}
+            >
+              <p className={heartClicked ? "block" : "hidden"}>
+                <strong>{wishlistMessage} </strong>
               </p>
             </div>
           )}
@@ -111,10 +143,15 @@ function Pizzas() {
                   />
                   <div className="absolute bg-white top-2 rounded-lg right-2">
                     <button
-                      onClick={handleAddTowishlist}
+                      onClick={() => handleWishlistToggle(pizza)}
                       className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 bg-card text-card-foreground hover:bg-muted"
                     >
-                      <box-icon color="red" name="heart"></box-icon>
+                      <box-icon
+                        name="heart"
+                        color={isInWishlist(pizza.id) ? "red" : "grey"}
+                        type={isInWishlist(pizza.id) ? "solid" : "regular"}
+                      ></box-icon>
+
                       <span className="sr-only">Add to favorites</span>
                     </button>
                   </div>
@@ -134,7 +171,7 @@ function Pizzas() {
                       {pizza.stock === true ? "In Stock" : "Out Of Stock"}
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-1">
                     {pizza.description}
                   </p>
                   <div className="flex items-center justify-between">
@@ -151,15 +188,23 @@ function Pizzas() {
                       </button>
                     </div>
                   </div>
+
                   {pizza.stock === true ? (
                     <button
-                      className={`mt-2 w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium focus-visible:outline-none text-orange-600 hover:bg-orange-200 hover:text-black duration-300 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border  h-9 rounded-md px-3  ${pizza.stock === true ? "":"disabled"}`}
+                      onClick={() => handleOrderNow(pizza)}
+                      className="mt-2 w-full inline-flex items-center justify-center
+                  whitespace-nowrap text-sm font-medium disabled text-orange-600
+                  hover:bg-orange-200 hover:text-black duration-300 border h-9
+                  rounded-md px-3"
                     >
                       Order Now
                     </button>
                   ) : (
                     <button
-                      className={`mt-2 w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium disabled text-orange-600 hover:bg-orange-200 hover:text-black duration-300  border  h-9 rounded-md px-3 `}
+                      className="mt-2 w-full inline-flex cursor-not-allowed items-center justify-center
+                  whitespace-nowrap text-sm font-medium disabled text-orange-600
+                  hover:bg-orange-200 hover:text-black duration-300 border h-9
+                  rounded-md px-3"
                     >
                       Order Now
                     </button>

@@ -1,5 +1,4 @@
 // import React from 'react'
-
 import Pizzas from "../ProductsSection/Pizzas"
 
 function products() {

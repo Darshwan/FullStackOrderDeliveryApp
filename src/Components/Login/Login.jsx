@@ -43,7 +43,7 @@ function Login() {
       dispatch(signInFailure(data.message));
     }
     if (res.ok) {
-      navigate("/dashboard");
+      navigate("/dashboard?tab=profile");
       dispatch(signInSuccess(data.user));
     }
     // if (data && data.user) {

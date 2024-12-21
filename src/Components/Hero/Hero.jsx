@@ -5,7 +5,7 @@ import "./Hero.css";
 export default function Hero() {
 
   return (
-    <div className="hero-container flexCenCol">
+    <div className="hero-container flex flex-col items-center sm:items-start sm:px-16 justify-center  px-2">
       <h1>
         Crafting your <br /> Exceptional Dining
         <br /> <span> Reservations </span>

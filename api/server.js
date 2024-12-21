@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose';
 import authRoutes from './routes/auth.route.js'
-import pizzaRoutes from './routes/pizzas.route.js'
+import pizzaRoutes from './routes/pizzas.routes.js'
 import userRoutes from './routes/user.route.js'
 import orderRoutes from './routes/order.routes.js'
 import cors from 'cors'

@@ -4,11 +4,13 @@ import {persistReducer} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import persistStore from 'redux-persist/es/persistStore'
 import cartReducer from './cart/cartSlice'
+import WishlistsReducer from "./wishlist/wishlist";
 // import persistStore from 'redux-persist/es/persistStore'
 
 const rootReducer = combineReducers({
   userOfRestaurantApp: userReducer,
-  cartOfResturantApp: cartReducer
+  cartOfResturantApp: cartReducer,
+  wishlistsOfResturantApp: WishlistsReducer
 })
 
 const persistConfig={

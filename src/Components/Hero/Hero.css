@@ -17,9 +17,7 @@ font-family: 'Poppins', sans-serif;
   text-align:start;
   transition: 0.3s ease-in-out;
 }
-.hero-margin{
-  margin-top: 8rem;
-}
+
 .hero-container > h1{
   color:#fafafa;
   font-size: 3.1rem;

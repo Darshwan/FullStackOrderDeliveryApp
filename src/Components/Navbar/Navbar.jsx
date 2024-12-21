@@ -74,7 +74,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/dashboard"
+                to="/dashboard?tab=profile"
                 className={({ isActive }) => {
                   `${isActive ? "text-rose-800" : "text-stone-100"}`;
                 }}
@@ -87,13 +87,21 @@ export default function Navbar() {
         <div className="searchBar flexCenRow">
           <input type="text" placeholder="Search Food..." />
           <box-icon name="search" color="#E32636"></box-icon>
-        </div>  
-        <div className=" sm:flex gap-4 flex-row items-center justify-center lg:hidden md:hidden">
-                <Link to='/cart' className="flex items-center justify-center p-2 border border-red-600 rounded-full">
-                    <box-icon name='cart' type='solid' color="#E32636"></box-icon>
-                </Link>
-                <Link to='/wishlist' className="flex items-center justify-center p-2 border border-red-600 rounded-full"><box-icon type='solid' name='heart' color="#E32636"></box-icon></Link>
-                </div>
+        </div>
+        <div className="flex flex-row items-center justify-center gap-2">
+          <Link
+            to="/cart"
+            className="flex items-center justify-center p-2 border border-red-600 rounded-full"
+          >
+            <box-icon name="cart" type="regular" color="white"></box-icon>
+          </Link>
+          <Link
+            to="/wishlist"
+            className="flex items-center justify-center p-2 border border-red-600 rounded-full"
+          >
+            <box-icon type="regular" name="heart" color="white"></box-icon>
+          </Link>
+        </div>
         <div className="otherNavLinks flexCenRow">
           {currentUserOfRestaurantApp ? (
             <div className=" dropdown">
@@ -167,7 +175,8 @@ export default function Navbar() {
           ) : (
             <>
               <button className="loginBtn btn">
-                <Link to="/login">Login</Link></button>
+                <Link to="/login">Login</Link>
+              </button>
               <button className="signUpBtn btn">
                 <Link to="/signup">Sign up</Link>
               </button>
