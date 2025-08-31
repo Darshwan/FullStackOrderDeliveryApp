@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import pizzas from '../scripts/pizzas.json' assert{type: 'json'}
+import pizzas from "../scripts/pizzas.json" with { type: "json" };
 
 const orderSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
